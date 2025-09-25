@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ===== About Section ===== */
+.section {
+  background: #ffffff;
+  max-width: 800px;
+  width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Gradient Border Effect */
+.section::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(135deg, #0b3d91, #5a8dee);
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Heading */
+.section h2 {
+  font-size: 2.2rem;
+  color: #0b3d91;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Underline effect for heading */
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0b3d91;
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.section:hover h2::after {
+  width: 100px;
+}
+
+/* Paragraph */
+.section p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  padding: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.section:hover p {
+  color: #333;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .section {
+    padding: 2rem 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+}
+</style>
+</head>
+<body>
+    <main>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>About NetLink</h2>
+      <p>NetLink is a centralized alumni networking platform that helps alumni stay connected, share opportunities, and engage with their alma mater.</p>
+    </section>
+  </main>
+</body>
+</html>
